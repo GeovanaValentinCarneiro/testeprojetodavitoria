@@ -19,6 +19,32 @@ main {
     padding: 20px;
 }
 
+/* Container de imagem com botão */
+.img-container {
+    position: relative;
+    display: inline-block;
+}
+
+.btn-assistir {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e50914;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Mostrar botão ao passar o mouse */
+.img-container:hover .btn-assistir {
+    opacity: 1;
+}
+
 /* Filme em destaque */
 .filme-destaque {
     display: flex;
@@ -38,7 +64,7 @@ main {
 }
 
 .filme-destaque img {
-    width: 400px; /* aumentei o tamanho da imagem do topo */
+    width: 400px;
     border-radius: 10px;
 }
 
@@ -78,7 +104,7 @@ main {
 }
 
 .filme-card img {
-    width: 100%; /* diminui proporcionalmente em grid */
+    width: 100%;
     height: auto;
     display: block;
     border-radius: 10px 10px 0 0;
